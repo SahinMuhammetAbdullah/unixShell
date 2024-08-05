@@ -1,7 +1,7 @@
 #!/bin/bash
-OUT_LOG_FILE="tmp/combine_logs.log"
+OUT_LOG_FILE="/tmp/combine_logs.log"
 
-if [ ! -f "$OUT_LOG_FILE"
+if [ ! -f "$OUT_LOG_FILE" ]; then
   touch "$OUT_LOG_FILE"
 fi
 
