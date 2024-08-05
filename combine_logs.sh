@@ -34,6 +34,6 @@ for clear in "${LOG_FILES[@]}"; do
   > "$CLEAR_LOG_FILE"
 done
 
-nc -u 10.10.10.11 514 < /tmp/combined_logs.log
+nc -u -w 5 10.10.10.11 514 < /tmp/combined_logs.log
 
 echo "" > "$OUT_LOG_FILE"
