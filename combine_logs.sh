@@ -31,7 +31,7 @@ echo "Combined Log File Created At $OUT_LOG_FILE"
 for clear in "${LOG_FILES[@]}"; do
   set -- clear
   CLEAR_LOG_FILE=$(echo $clear | awk '{print $1}')
-  echo "" > "$CLEAR_LOG_FILE"
+  > "$CLEAR_LOG_FILE"
 done
 
 nc -u 10.10.10.11 514 < /tmp/combined_logs.log
