@@ -12,6 +12,9 @@ LOG_FILES=(
   "/var/log/deamon.log DEAMON"
   "/var/log/user.log USERLOG"
   "/var/log/messages MESSAGES"
+  "/var/log/vsftpd.log VSFTPD"
+  "/var/log/apache2/access.log APACHE"
+
 )
 for entry in "${LOG_FILES[@]}"; do
   set -- entry
